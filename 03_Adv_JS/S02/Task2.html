@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <input type="password" placeholder="password" />
+    <h2>DOM</h2>
+    <p>
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Ad neque dolor
+      omnis, voluptatum sequi consequatur exercitationem ipsum. Laborum
+      voluptatum id saepe expedita, consequuntur accusamus voluptate, quam
+      obcaecati vitae similique blanditiis ullam? Tempore eveniet, laboriosam
+      temporibus, consectetur facere velit ullam ut dicta recusandae magni
+      dolores culpa facilis cupiditate aperiam quasi doloremque possimus eos
+      sunt illum placeat qui doloribus delectus est in? Iste, nam. Minima unde
+      fugit ea obcaecati. Totam pariatur quam velit aliquid, neque delectus
+      voluptatibus a tenetur quaerat possimus. Saepe ratione doloribus
+      inventore! Quas sequi itaque magnam, deserunt rerum quos quaerat laborum
+      cum eaque, cupiditate quidem, praesentium aut ut qui!
+    </p>
+    <button onclick="fn()">Login</button>
+
+    <script>
+      function fn() {
+        var h2Dom = document.querySelector("h2");
+        var pDomElement = document.querySelector("p");
+        var button = document.querySelector("button");
+
+        pDomElement.innerText = "JS is Looking Super super Easy";
+        button.innerText = "Logout";
+        h2Dom.innerText = "Javascript";
+      }
+    </script>
+  </body>
+</html>

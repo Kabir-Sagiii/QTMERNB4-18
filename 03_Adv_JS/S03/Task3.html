@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head></head>
+
+  <body>
+    <h2>Title 1</h2>
+    <p>
+      Lorem ipsum, dolor sit amet consectetur adipisicing elit. Veniam ipsum,
+      illo fugiat eaque ullam aspernatur, accusantium expedita veritatis tempore
+      nulla ex, commodi aut atque earum quaerat quidem nam placeat quisquam
+      nihil. Distinctio ratione odio blanditiis totam! Placeat temporibus sint,
+      laborum expedita unde obcaecati adipisci ducimus ullam dolorem ratione
+      doloremque deserunt fugit voluptatum nisi dolores quaerat non libero
+      assumenda impedit consequuntur est praesentium debitis rerum? In maxime
+      debitis quibusdam soluta eaque nihil laudantium, beatae iure ipsa ipsum
+      nulla tenetur repellat cum alias ducimus enim ipsam earum molestias harum
+      incidunt. Sequi porro pariatur dolore laborum ipsam voluptatibus officiis
+      eveniet impedit voluptatum numquam!
+    </p>
+    <h2>Title 2</h2>
+
+    <button onclick="changeStyle()">Click Me</button>
+
+    <script>
+      function changeStyle() {
+        var h2Collection = document.querySelectorAll("h2");
+        var pCollection = document.querySelectorAll("p");
+
+        var h2Dom = h2Collection[1];
+        var pdom = pCollection[0];
+        h2Dom.style.color = "red";
+        pdom.style.color = "green";
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Document Object Model</title>
+  </head>
+
+  <body>
+    <h2 id="title">Document Object Model</h2>
+    <button onclick="changeContent()">Submit</button>
+
+    <script>
+      function changeContent() {
+        var h2DomElement = document.querySelector("#title");
+
+        h2DomElement.innerText = "Hello Javascript";
+        h2DomElement.style.backgroundColor = "black";
+        h2DomElement.style.padding = "20px";
+        h2DomElement.style.color = "white";
+        // for (let key in h2DomElement.style) {
+        //   document.write(key);
+        //   document.write("<br/>");
+        // }
+      }
+    </script>
+  </body>
+</html>

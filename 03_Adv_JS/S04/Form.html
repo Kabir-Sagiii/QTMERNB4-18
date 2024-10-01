@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      .container {
+        width: 300px;
+        padding: 10px;
+        box-shadow: 0 0 10px black;
+        text-align: center;
+        margin: 100px auto;
+        background-color: black;
+        color: white;
+      }
+      .container div {
+        margin-bottom: 20px;
+      }
+    </style>
+  </head>
+
+  <body>
+    <div class="container">
+      <form>
+        <h2>Simple Form</h2>
+        <div>
+          <input id="username" type="text" placeholder="username" />
+        </div>
+        <div>
+          <input id="password" type="password" placeholder="password" />
+        </div>
+        <div>
+          <input id="email" type="email" placeholder="email" />
+        </div>
+        <div>
+          <input type="checkbox" />Switch to Dark Mode<br /><br />
+          <input type="button" value="Register" onclick="getData()" />
+        </div>
+      </form>
+
+      <table width="100%">
+        <tr>
+          <th>NAME</th>
+          <th>PASSWWORD</th>
+          <th>EMAIL</th>
+        </tr>
+        <tr>
+          <td id="col1"></td>
+          <td></td>
+          <td></td>
+        </tr>
+      </table>
+    </div>
+
+    <script>
+      function getData() {
+        var username = document.getElementById("username");
+        var password = document.getElementById("password");
+        var email = document.getElementById("email");
+        var td1 = document.getElementById("col1");
+
+        var userNameValue = username.value;
+        var passwordValue = password.value;
+        var emailValue = email.value;
+
+        td1.innerText = userNameValue;
+
+        console.log(userNameValue, passwordValue, emailValue);
+      }
+    </script>
+  </body>
+</html>

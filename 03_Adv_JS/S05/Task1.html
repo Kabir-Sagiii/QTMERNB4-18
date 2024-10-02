@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2>DOM element creation</h2>
+    <button onclick="fncreate()">Create DOM element</button>
+
+    <script>
+      function fncreate() {
+        var pDomElement = document.createElement("p");
+
+        pDomElement.innerText = "My first dynamic p element";
+        pDomElement.style.color = "red";
+
+        var bodyDomElement = document.querySelector("body");
+
+        bodyDomElement.appendChild(pDomElement);
+      }
+    </script>
+  </body>
+</html>

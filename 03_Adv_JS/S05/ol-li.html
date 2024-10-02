@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+  <body>
+    <h2>DOM element creation</h2>
+    <table>
+      <thead>
+        <th>ID</th>
+        <th>NAME</th>
+        <th>CITY</th>
+      </thead>
+      <tbody>
+        <tr>
+          <td>101</td>
+          <td>S1</td>
+          <td>C1</td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>S1</td>
+          <td>C1</td>
+        </tr>
+        <tr>
+          <td>101</td>
+          <td>S1</td>
+          <td>C1</td>
+        </tr>
+      </tbody>
+    </table>
+    <button onclick="fncreate()">Create DOM element</button>
+
+    <script>
+      function fncreate() {
+        var ol = document.createElement("ol");
+
+        var li = document.createElement("li");
+        var li1 = document.createElement("li");
+
+        li.innerText = "Apple";
+        li1.innerText = "Orange";
+
+        ol.appendChild(li);
+        ol.appendChild(li1);
+
+        document.querySelector("body").appendChild(ol);
+      }
+    </script>
+  </body>
+</html>

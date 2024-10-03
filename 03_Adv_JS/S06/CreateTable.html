@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head> </head>
+
+  <body>
+    <button onclick="createTable()">Create Table</button>
+
+    <script>
+      function createTable() {
+        var table = document.createElement("table");
+
+        var thead = document.createElement("thead");
+
+        var tr = document.createElement("tr");
+        var th1 = document.createElement("th");
+        th1.innerText = "ID";
+        var th2 = document.createElement("th");
+        th2.innerText = "NAME";
+        var th3 = document.createElement("th");
+        th3.innerText = "CITY";
+
+        thead.appendChild(tr);
+        tr.appendChild(th1);
+        tr.appendChild(th2);
+        tr.appendChild(th3);
+
+        var tbody = document.createElement("tbody");
+        var tr1 = document.createElement("tr");
+        var td1 = document.createElement("td");
+        td1.innerText = 101;
+        var td2 = document.createElement("td");
+        td2.innerText = "Rohan Sharma";
+        var td3 = document.createElement("td");
+        td3.innerText = "Pune";
+
+        tbody.append(tr1);
+        tr1.appendChild(td1);
+        tr1.appendChild(td2);
+        tr1.appendChild(td3);
+
+        var tr2 = document.createElement("tr");
+        var td4 = document.createElement("td");
+        td4.innerText = 102;
+        var td5 = document.createElement("td");
+        td5.innerText = "Riya Verma";
+        var td6 = document.createElement("td");
+        td6.innerText = "Mumbai";
+
+        tbody.append(tr2);
+        tr2.appendChild(td4);
+        tr2.appendChild(td5);
+        tr2.appendChild(td6);
+
+        var tr3 = document.createElement("tr");
+        var td7 = document.createElement("td");
+        td7.innerText = 103;
+        var td8 = document.createElement("td");
+        td8.innerText = "Sneha Reddy";
+        var td9 = document.createElement("td");
+        td9.innerText = "Hyderabad";
+
+        tbody.append(tr3);
+        tr3.appendChild(td7);
+        tr3.appendChild(td8);
+        tr3.appendChild(td9);
+
+        table.appendChild(thead);
+        table.appendChild(tbody);
+
+        table.width = "300px";
+        table.rules = "rows";
+
+        tbody.align = "center";
+        document.querySelector("body").appendChild(table);
+      }
+    </script>
+  </body>
+</html>

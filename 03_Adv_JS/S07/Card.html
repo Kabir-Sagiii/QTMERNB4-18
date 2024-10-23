@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <style>
+      #container {
+        display: flex;
+        justify-content: space-evenly;
+        flex-wrap: wrap;
+      }
+    </style>
+  </head>
+
+  <body>
+    <h2>Profile Card</h2>
+    <button onclick="createCards()">create card</button>
+    <div id="container"></div>
+
+    <script>
+      function createCard(info) {
+        //info = {url:"",name:""}
+        var divDomElement = document.createElement("div");
+
+        // divDomElement.style.border = "3px solid red";
+        divDomElement.style.boxShadow = " 0 0 10px black";
+        divDomElement.style.width = "230px";
+        divDomElement.style.height = "330px";
+        divDomElement.style.margin = "50px 0px";
+
+        var img = document.createElement("img");
+
+        img.src = info.url;
+        img.height = "200";
+        img.width = "230";
+
+        var h3 = document.createElement("h3");
+        h3.innerText = info.name;
+        h3.style.textAlign = "center";
+
+        var p = document.createElement("p");
+        p.innerText = ` Lorem ipsum dolor sit, amet  adipisicing elit. Beatae cumque
+      `;
+
+        p.style.textAlign = "center";
+        divDomElement.appendChild(img);
+        divDomElement.appendChild(h3);
+        divDomElement.appendChild(p);
+
+        document.querySelector("#container").appendChild(divDomElement);
+      }
+
+      function createCards() {
+        var data = [
+          {
+            url: "https://www.crushpixel.com/big-static7/preview4/portrait-young-professional-man-suit-258742.jpg",
+            name: "Raj Verma",
+          },
+          {
+            url: "https://th.bing.com/th/id/R.27ae43a80a74fb4f58d31d0c660eb873?rik=Gym%2bvmBhCMcllg&riu=http%3a%2f%2f5stoneshrm.com%2fwp-content%2fuploads%2f2014%2f06%2fbusinesswoman-2.jpg&ehk=XTIri0c1ETWpYDXgOEDmC82UApEutdYowWawSrpk9Qg%3d&risl=&pid=ImgRaw&r=0",
+            name: "Ziya Khan",
+          },
+          {
+            url: "https://img.freepik.com/premium-photo/businesswoman-hold-with-laptop-computer_562687-194.jpg",
+            name: "Riya Verma",
+          },
+          {
+            url: "https://localjobs.sulekha.com/common/images/jobs-women.png",
+            name: "Sneha Reddy",
+          },
+        ];
+        var x = 0;
+        while (x <= 3) {
+          createCard(data[x]);
+          x++;
+        }
+      }
+    </script>
+  </body>
+</html>
